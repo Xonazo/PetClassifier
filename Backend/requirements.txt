@@ -1,0 +1,10 @@
+pip install tensorflow
+pip install opencv-python
+pip install numpy
+pip install keras
+pip install scikit-learn
+pip install Flask
+pip install Flask-CORS
+pip install filetype
+
+

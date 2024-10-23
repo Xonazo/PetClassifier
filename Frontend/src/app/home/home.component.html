@@ -1,0 +1,28 @@
+<div class="form-container">
+
+    <h2>Sube una imagen para predecir la raza</h2>
+
+    <div>
+      <label for="file" class="sr-only">Selecciona una imagen (JPG, JPEG, PNG)</label>
+      <input id="file" type="file" (change)="onFileSelected($event)" />
+    </div>
+    <div>
+      <button (click)="onUpload()" [disabled]="isUploading">
+        {{ isUploading ? 'Subiendo...' : 'Subir Imagen' }}
+      </button>
+    </div>
+
+    <div *ngIf="isUploading" class="uploading">
+      Subiendo imagen...
+    </div>
+
+    <div *ngIf="prediction === 'cat'" class="prediction">
+        Raza: Gato
+      </div>
+      
+      <div *ngIf="prediction === 'dog'" class="prediction">
+        Raza: Perro
+      </div>
+
+
+  </div>
